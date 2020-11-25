@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">practicaTiendaVergeles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_tiendahombres">Tienda Hombres</string>
+    <string name="str_tiendamujeres">Tienda Mujeres</string>
+    <string name="str_tituloVegeles">Tienda Vergeles</string>
+    <string name="str_bienvenido">Bienvenido a la </string>
+    <string name="str_comprar">Comprar</string>
+    <string name="str_euro">€</string>
+</resources>

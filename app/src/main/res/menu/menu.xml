@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/Ordenar"
+        android:icon="@drawable/ic_action_sort"
+        android:title="Ordenar"
+        app:showAsAction="always">
+    <menu>
+        <item android:id="@+id/PrecioAlto"
+            android:title="Ordenar por Precio mas Alto"
+            app:showAsAction="withText">
+        </item>
+        <item android:id="@+id/PrecioBajo"
+            android:title="Ordenar por Precio mas Bajo"
+            app:showAsAction="withText">
+        </item>
+        <item android:id="@+id/PrecioSinRelevancia"
+            android:title="Ordenar Sin Relevancia"
+            app:showAsAction="withText">
+        </item>
+    </menu>
+    </item>
+
+
+
+
+
+
+</menu>

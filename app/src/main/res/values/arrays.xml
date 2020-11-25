@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="imagenes_ropa_mujer">
+        <item>@drawable/imagenmujer1</item>
+        <item>@drawable/imagenmujer2</item>
+        <item>@drawable/imagenmujer3</item>
+        <item>@drawable/imagenmujer4</item>
+        <item>@drawable/imagenmujer5</item>
+        <item>@drawable/imagenmujer6</item>
+        <item>@drawable/imagenmujer7</item>
+        <item>@drawable/imagenmujer8</item>
+        <item>@drawable/imagenmujer9</item>
+        <item>@drawable/imagenmujer10</item>
+        <item>@drawable/imagenmujer11</item>
+        <item>@drawable/imagenmujer12</item>
+
+    </array>
+    <array name="imagenes_ropa_hombre">
+        <item>@drawable/imagenhombre1</item>
+        <item>@drawable/imagenhombre2</item>
+        <item>@drawable/imagenhombre3</item>
+        <item>@drawable/imagenhombre4</item>
+        <item>@drawable/imagenhombre5</item>
+        <item>@drawable/imagenhombre6</item>
+        <item>@drawable/imagenhombre7</item>
+        <item>@drawable/imagenhombre8</item>
+        <item>@drawable/imagenhombre9</item>
+        <item>@drawable/imagenhombre10</item>
+        <item>@drawable/imagenhombre11</item>
+        <item>@drawable/imagenhombre12</item>
+    </array>
+
+
+</resources>
