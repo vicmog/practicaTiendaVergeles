@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -23,10 +24,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.practicatiendavergeles.Item.ItemRopa;
 import com.example.practicatiendavergeles.R;
 import com.example.practicatiendavergeles.RecyclerViewAdapter.RecyclerViewAdapter;
+import com.example.practicatiendavergeles.ViewModel.miViewModel;
 import com.example.practicatiendavergeles.comparadores.ItemRopaComparator;
 import com.example.practicatiendavergeles.comparadores.ItemRopaComparator2;
 
@@ -41,6 +44,8 @@ public class TiendaMujeresFragment extends Fragment {
     private Resources res;
     private View v;
     private Toolbar toolbar;
+    private Button btFinalizar;
+    private miViewModel viewModel;
 
 
     @Override
@@ -51,6 +56,7 @@ public class TiendaMujeresFragment extends Fragment {
         toolbar = view.findViewById(R.id.miToolbarMujeres);
         ((AppCompatActivity) this.getActivity()).setSupportActionBar(toolbar); //cargar menu en toolbar fragments.
         toolbar.inflateMenu(R.menu.menu);
+
         return view;
     }
 
@@ -61,19 +67,38 @@ public class TiendaMujeresFragment extends Fragment {
         NavController navController = Navigation.findNavController(getActivity(), R.id.fragment);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
 
-
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration);
         toolbar.setTitle("");
+
+        viewModel = new ViewModelProvider(getActivity()).get(miViewModel.class);
 
         v=view;
         res = view.getResources();
         arrayImagenes = res.obtainTypedArray(R.array.imagenes_ropa_mujer);
+        btFinalizar = view.findViewById(R.id.btFinalizarMujeres);
+        btFinalizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(viewModel.getListaCesta()==null){
+                    viewModel.createListaCesta();
+                }
 
+
+                navController.navigate(R.id.cestaFragment);
+
+            }
+        });
 
 
         cargaArrays();
         cargaReciclerView();
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        toolbar.setTitle("");
     }
 
     @Override

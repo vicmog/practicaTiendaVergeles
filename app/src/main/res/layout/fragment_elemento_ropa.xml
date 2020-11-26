@@ -16,23 +16,26 @@
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/tvDescripcionElementoRopa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mitoolbarElemento"
+        app:layout_constraintVertical_bias="1.0"
         tools:src="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvDescripcionElementoRopa"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="336dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="424dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="monospace"
         android:gravity="center|center_vertical"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,9 +43,10 @@
         android:id="@+id/btComprar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="100dp"
-        android:text="Comprar"
+        android:layout_marginTop="60dp"
+        android:text="@string/str_añadircarrito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPrecioElementoRopa" />
 
@@ -57,16 +61,6 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDescripcionElementoRopa" />
-
-    <Button
-        android:id="@+id/btFinalizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="80dp"
-        android:text="Finalizar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPrecioElementoRopa" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mitoolbarElemento"

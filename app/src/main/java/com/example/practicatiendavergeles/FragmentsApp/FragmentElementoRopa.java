@@ -29,7 +29,7 @@ public class FragmentElementoRopa extends Fragment {
     private TextView descripcion ;
     private TextView precio ;
     private Button btComprar;
-    private Button btFinalizar;
+
     private char modo;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,7 +62,7 @@ public class FragmentElementoRopa extends Fragment {
         precio.setText(item.getPrecio()+"");
 
         btComprar = view.findViewById(R.id.btComprar);
-        btFinalizar = view.findViewById(R.id.btFinalizar);
+
 
         btComprar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,29 +91,7 @@ public class FragmentElementoRopa extends Fragment {
 
             }
         });
-        btFinalizar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(viewModel.getListaCesta()==null){
-                    viewModel.createListaCesta();
-                    viewModel.insertListaCesta(item);
-                }else{
-                    boolean comprado = false;
-                    for (int i = 0; i < viewModel.getListaCesta().size() ; i++) {
-                        if(viewModel.getListaCesta().get(i).getDescripcion().equals(item.getDescripcion())){
-                            comprado = true;
-                        }
-                    }
-                    if (!comprado){
-                        viewModel.insertListaCesta(item);
-                    }
 
-                }
-
-                navController.navigate(R.id.cestaFragment);
-
-            }
-        });
 
     }
 }

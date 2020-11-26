@@ -8,4 +8,5 @@
     <string name="str_bienvenido">Bienvenido a la </string>
     <string name="str_comprar">Comprar</string>
     <string name="str_euro">€</string>
+    <string name="str_añadircarrito">Añadir al carrito</string>
 </resources>
