@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/tiendaHombresFragment"
-        android:name="com.example.practicatiendavergeles.FragmentsApp.TiendaHombresFragment"
+        android:name="com.example.practicatiendavergeles.FragmentsApp.TiendaFragment"
         android:label="fragment_tienda_hombres"
         tools:layout="@layout/fragment_tienda_hombres" >
         <action

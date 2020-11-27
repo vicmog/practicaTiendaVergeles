@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentsApp.TiendaHombresFragment" >
+    tools:context=".FragmentsApp.TiendaFragment" >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mitoolbarhombres"
@@ -39,7 +39,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
-        android:text="Finalizar compra"
+        android:drawableEnd="@drawable/ic_action_carrito"
+        android:text="@string/str_finalizarCompra"
+        android:textColor="#01207C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

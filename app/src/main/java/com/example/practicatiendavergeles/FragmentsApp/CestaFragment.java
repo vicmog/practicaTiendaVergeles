@@ -24,6 +24,7 @@ import com.example.practicatiendavergeles.Item.ItemRopa;
 import com.example.practicatiendavergeles.R;
 import com.example.practicatiendavergeles.RecyclerViewAdapter.RecyclerViewAdapterCesta;
 import com.example.practicatiendavergeles.ViewModel.miViewModel;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
@@ -67,6 +68,9 @@ public class CestaFragment extends Fragment {
             public void onClick(View v) {
                 viewModel.createListaCesta();
                 navController.navigate(R.id.inicioFragment);
+                Snackbar.make(v, "Compra realizada con exito", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
             }
         });
 
@@ -80,11 +84,15 @@ public class CestaFragment extends Fragment {
         }
         Double iva =precio*0.21;
         Double preciototal = precio+iva;
-        tvPrecioSinIVA.setText(precio+"");
-        tvIVA.setText(iva+"");
-        tvPrecioTotal.setText(preciototal+"");
+        tvPrecioSinIVA.setText(redondeo(precio,3)+"");
+        tvIVA.setText(redondeo(iva,3)+"");
+        tvPrecioTotal.setText(redondeo(preciototal,3)+"");
 
 
+    }
+    public static double redondeo(double num, int numDec) {
+        double pot10 = Math.pow(10, numDec);
+        return Math.round(num * pot10) / pot10;
     }
 
     private void cargaReciclerView() {

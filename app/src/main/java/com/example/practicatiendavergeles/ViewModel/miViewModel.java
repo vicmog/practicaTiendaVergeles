@@ -1,20 +1,21 @@
 package com.example.practicatiendavergeles.ViewModel;
 
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.example.practicatiendavergeles.Item.ItemRopa;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class miViewModel extends androidx.lifecycle.ViewModel {
+public class miViewModel extends ViewModel {
 
-    private final MutableLiveData<ItemRopa> selected = new MutableLiveData<ItemRopa>();
+    private final MutableLiveData<ItemRopa>item = new MutableLiveData<ItemRopa>();
     private  List<ItemRopa> listaCesta;
     private char modo;
 
     public void setItem(ItemRopa i){
-        selected.setValue(i);
+        item.setValue(i);
 
     }
     public void setModo(char i){
@@ -25,7 +26,7 @@ public class miViewModel extends androidx.lifecycle.ViewModel {
         return modo;
     }
     public ItemRopa getItem(){
-        return selected.getValue();
+        return item.getValue();
     }
 
     public void createListaCesta(){

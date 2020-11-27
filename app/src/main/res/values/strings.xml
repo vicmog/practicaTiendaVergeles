@@ -9,4 +9,6 @@
     <string name="str_comprar">Comprar</string>
     <string name="str_euro">€</string>
     <string name="str_añadircarrito">Añadir al carrito</string>
+    <string name="str_precio">Precio: </string>
+    <string name="str_finalizarCompra">Finalizar compra</string>
 </resources>
