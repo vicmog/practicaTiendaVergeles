@@ -11,4 +11,10 @@
     <string name="str_añadircarrito">Añadir al carrito</string>
     <string name="str_precio">Precio: </string>
     <string name="str_finalizarCompra">Finalizar compra</string>
+    <string name="str_content_image">imagen</string>
+    <string name="str_descripcion">Descripción</string>
+    <string name="str_articulos_comprados">Articulos comprados</string>
+    <string name="str_total_sin_iva">Total sin IVA:</string>
+    <string name="str_iva">"IVA del 21%: "</string>
+    <string name="str_preciototal">Precio Total:</string>
 </resources>

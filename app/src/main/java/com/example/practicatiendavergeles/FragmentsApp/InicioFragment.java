@@ -39,14 +39,15 @@ private miViewModel viewModel;
             @Override
             public void onClick(View v) {
             viewModel.setModo('h');
-            navController.navigate(R.id.tiendaHombresFragment);
+            navController.navigate(R.id.tiendaFragment);
             }
         });
         btMujeres.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             viewModel.setModo('m');
-            navController.navigate(R.id.tiendaHombresFragment);
+            navController.navigate(R.id.tiendaFragment);
+
             }
         });
     }

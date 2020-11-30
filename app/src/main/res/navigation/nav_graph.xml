@@ -11,34 +11,24 @@
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" >
         <action
-            android:id="@+id/action_inicioFragment_to_tiendaMujeresFragment"
-            app:destination="@id/tiendaMujeresFragment" />
-        <action
-            android:id="@+id/action_inicioFragment_to_tiendaHombresFragment"
-            app:destination="@id/tiendaHombresFragment" />
+            android:id="@+id/action_inicioFragment_to_tiendaFragment"
+            app:destination="@id/tiendaFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/tiendaMujeresFragment"
-        android:name="com.example.practicatiendavergeles.FragmentsApp.TiendaMujeresFragment"
-        android:label="fragment_tienda_mujeres"
-        tools:layout="@layout/fragment_tienda_mujeres" >
-        <action
-            android:id="@+id/action_tiendaMujeresFragment_to_fragmentElementoRopa"
-            app:destination="@id/fragmentElementoRopa" />
-        <action
-            android:id="@+id/action_tiendaMujeresFragment_to_inicioFragment"
-            app:destination="@id/inicioFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/tiendaHombresFragment"
+        android:id="@+id/tiendaFragment"
         android:name="com.example.practicatiendavergeles.FragmentsApp.TiendaFragment"
         android:label="fragment_tienda_hombres"
         tools:layout="@layout/fragment_tienda_hombres" >
+
         <action
-            android:id="@+id/action_tiendaHombresFragment_to_fragmentElementoRopa"
+            android:id="@+id/action_tiendaFragment_to_cestaFragment"
+            app:destination="@id/cestaFragment" />
+        <action
+            android:id="@+id/action_tiendaFragment_to_fragmentElementoRopa"
             app:destination="@id/fragmentElementoRopa" />
         <action
-            android:id="@+id/action_tiendaHombresFragment_to_inicioFragment"
+            android:id="@+id/action_tiendaFragment_to_inicioFragment"
             app:destination="@id/inicioFragment" />
     </fragment>
     <fragment
@@ -46,15 +36,10 @@
         android:name="com.example.practicatiendavergeles.FragmentsApp.FragmentElementoRopa"
         android:label="fragment_elemento_ropa"
         tools:layout="@layout/fragment_elemento_ropa" >
+
         <action
-            android:id="@+id/action_fragmentElementoRopa_to_tiendaHombresFragment"
-            app:destination="@id/tiendaHombresFragment" />
-        <action
-            android:id="@+id/action_fragmentElementoRopa_to_tiendaMujeresFragment"
-            app:destination="@id/tiendaMujeresFragment" />
-        <action
-            android:id="@+id/action_fragmentElementoRopa_to_cestaFragment"
-            app:destination="@id/cestaFragment" />
+            android:id="@+id/action_fragmentElementoRopa_to_tiendaFragment"
+            app:destination="@id/tiendaFragment" />
     </fragment>
     <fragment
         android:id="@+id/cestaFragment"
@@ -62,11 +47,8 @@
         android:label="fragment_cesta"
         tools:layout="@layout/fragment_cesta" >
         <action
-            android:id="@+id/action_cestaFragment_to_tiendaMujeresFragment"
-            app:destination="@id/tiendaMujeresFragment" />
-        <action
-            android:id="@+id/action_cestaFragment_to_tiendaHombresFragment"
-            app:destination="@id/tiendaHombresFragment" />
+            android:id="@+id/action_cestaFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
         <action
             android:id="@+id/action_cestaFragment_to_fragmentElementoRopa"
             app:destination="@id/fragmentElementoRopa" />

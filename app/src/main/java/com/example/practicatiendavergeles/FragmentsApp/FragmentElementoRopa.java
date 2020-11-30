@@ -12,6 +12,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +52,7 @@ public class FragmentElementoRopa extends Fragment {
         viewModel = new ViewModelProvider(getActivity()).get(miViewModel.class);
 
         ItemRopa item = viewModel.getItem();
-        modo = viewModel.getModo();
+        
 
         imagen = view.findViewById(R.id.imgElementoRopa);
         descripcion = view.findViewById(R.id.tvDescripcionElementoRopa);
@@ -72,6 +73,7 @@ public class FragmentElementoRopa extends Fragment {
                     viewModel.insertListaCesta(item);
                 }else{
                     boolean comprado = false;
+
                     for (int i = 0; i < viewModel.getListaCesta().size() ; i++) {
                         if(viewModel.getListaCesta().get(i).getDescripcion().equals(item.getDescripcion())){
                             comprado = true;
@@ -82,11 +84,13 @@ public class FragmentElementoRopa extends Fragment {
                     }
 
                 }
-                if(modo=='m'){
-                    navController.navigate(R.id.tiendaMujeresFragment);
-                }else {
-                    navController.navigate(R.id.tiendaHombresFragment);
-                }
+
+
+                    navController.navigate(R.id.inicioFragment);
+
+                  
+
+
 
 
             }
